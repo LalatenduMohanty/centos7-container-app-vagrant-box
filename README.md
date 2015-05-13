@@ -1,10 +1,13 @@
 #CentOS Vagrant box with container tools.
+
+`This branch i.e. UTB(Upstream Tracker Build) will have changes to build Vagrant images to include latest upstream bits i.e. docker, k8s, atomic etc.
+
 ##Building the Vagrant box in CBS(CentOS build system)
 * Get access for building images in CBS. Refer http://wiki.centos.org/HowTos/CommunityBuildSystem
 * Checkout/git clone this repository
 * Run the ```do_vagrant_cbs.sh```
 
-```Here is the latest koji scratch build I did : http://cbs.centos.org/koji/taskinfo?taskID=13213```
+```Here is the latest koji scratch build I did : <todo>`
 
 ##Running the Vagrant box
 I used Fedora 21 and libvirt backend to run the vagrant box. 
@@ -13,17 +16,11 @@ To install Vagrant on Fedora 21
 ```yum/dnf install -y vagrant-libvirt vagrant```
 ##Running the Vagrant box on Fedora21 with Vagrant and libvirt
 
-The image is available in https://atlas.hashicorp.com/atomicapp/boxes/dev
+The image is available in https://atlas.hashicorp.com/atomicapp/boxes/dev-testing
 
 `Step-1` : Initialising a new Vagrant environment by creating a Vagrantfile
-``` 
-    wget http://cbs.centos.org/kojifiles/work/tasks/3214/13214/centos-7-container-scratch-1-1.x86_64.rhevm.ova
-    vagrant box add centos7-docker centos-7-container-scratch-1-1.x86_64.rhevm.ova
-    vagrant init centos7-docker
 ```
-Or
-```
-    vagrant init atomicapp/dev
+    vagrant init atomicapp/dev-testing
 ```
 `Step-2` : To start the vagrant image and ssh in to it, please run following command
 ```
@@ -34,12 +31,6 @@ Or
 
 ###To destroy the Vagrant box
 ```vagrant destroy```
-##Running docker inside the Vagrant box
-Inside the vagrant box, you should be run docker containers
-Example: (following commands should be run inside the Vagrant box)
-```
-docker pull centos
-docker run -t -i centos /bin/bash
 ```
 
 ##Running atomic app inside the vagrant box
@@ -63,6 +54,10 @@ Nulecule: https://github.com/projectatomic/nulecule
 * bash-completion
 * man-pages
 * atomic
+* docker-registry
+* nfs-utils
+* PyYAML
+* libyaml-devel
 
 ##Future roadmap
 
