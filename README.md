@@ -1,6 +1,6 @@
 #CentOS Vagrant box with container tools.
 
-`This branch i.e. UTB(Upstream Tracker Build) will have changes to build Vagrant images to include latest upstream bits i.e. docker, k8s, atomic etc.
+`This branch i.e. UTB(Upstream Tracker Build) will have changes to build Vagrant images to include latest upstream bits i.e. docker, k8s, atomic etc.`
 
 ##Building the Vagrant box in CBS(CentOS build system)
 * Get access for building images in CBS. Refer http://wiki.centos.org/HowTos/CommunityBuildSystem
@@ -31,7 +31,6 @@ The image is available in https://atlas.hashicorp.com/atomicapp/boxes/dev-testin
 
 ###To destroy the Vagrant box
 ```vagrant destroy```
-```
 
 ##Running atomic app inside the vagrant box
 Login to the vagrant box using `vagrant ssh` command. 
