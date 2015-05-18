@@ -16,8 +16,6 @@ koji -p cbs image-build \
   --ova-option vagrant_sync_directory=/home/vagrant/sync \
   --repo http://mirror.centos.org/centos/7/extras/x86_64/\
   --repo http://mirror.centos.org/centos/7/updates/x86_64/\
-  --repo http://cbs.centos.org/repos/virt7-testing/x86_64/os/\
-  --repo http://cbs.centos.org/repos/atomic7-testing/x86_64/os/\
   --scratch \
   --nowait \
   --disk-size=10
