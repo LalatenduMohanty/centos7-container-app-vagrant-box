@@ -52,6 +52,9 @@ tuned
 sed -i "/HWADDR/d" /etc/sysconfig/network-scripts/ifcfg-eth*
 sed -i "/UUID/d" /etc/sysconfig/network-scripts/ifcfg-eth*
 
+#Fixing issue #29
+sed -i 's/address/insecure_bind_address/' /etc/kubernetes/apiserver
+
 # set tuned profile to force virtual-guest
 tuned-adm profile virtual-guest
 
