@@ -53,9 +53,21 @@ Running the Vagrant box
 
 The image is available in https://atlas.hashicorp.com/atomicapp/boxes/dev . However you dont have to download the box image manually. The following steps will take care of it implicitly.
 
+*This Vagrant box is built for VirtualBox. *
+
+To run it on libvirt, a vagrant plugin, `vagrant-mutate <https://github.com/sciurus/vagrant-mutate>`_ must be installed.
+To install vagrant-mutate on *NIX system, run
+
+::
+   $vagrant plugin install vagrant-mutate
+
 *Step-1* : Initialising a new Vagrant environment by creating a Vagrantfile
 
     **vagrant init atomicapp/dev**
+
+*Step-1-b(Optional)* : To add the vagrant box to libvirt
+
+    **vagrant mutate atomicapp/dev libvirt**
 
 *Step-2* : To start the vagrant image and ssh in to it, please run following command
 
